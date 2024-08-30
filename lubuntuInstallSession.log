@@ -1,0 +1,820 @@
+=== START CALAMARES 3.3.5
+2024-08-28 - 16:17:15 [6]: void CalamaresApplication::init()
+2024-08-28 - 16:17:15 [6]:     Calamares version: 3.3.5 
+2024-08-28 - 16:17:15 [6]:     .. Using Qt version: 5.15.13 
+2024-08-28 - 16:17:15 [6]:     .. Build type: None 
+2024-08-28 - 16:17:15 [6]:     .. Using PyBind11 
+2024-08-28 - 16:17:15 [6]:     .. Using settings: "/etc/calamares/settings.conf" 
+2024-08-28 - 16:17:15 [6]:     .. Using log file: "/home/lubuntu/.cache/calamares/session.log" 
+2024-08-28 - 16:17:15 [6]:     .. Languages: ("ar", "as", "ast", "az", "az_AZ", "be", "bg", "bn", "ca", "ca@valencia", "cs_CZ", "da", "de", "el", "en", "en_GB", "eo", "es", "es_AR", "es_MX", "et", "eu", "fa", "fi_FI", "fr", "fur", "gl", "he", "hi", "hr", "hu", "id", "is", "it_IT", "ja", "ka", "ko", "lt", "ml", "mr", "nb", "nl", "oc", "pl", "pt_BR", "pt_PT", "ro", "ru", "si", "sk", "sl", "sq", "sr", "sr@latin", "sv", "tg", "th", "tr_TR", "uk", "vi", "zh_CN", "zh_TW") 
+2024-08-28 - 16:17:15 [6]: bool Calamares::initQmlModulesDir()
+2024-08-28 - 16:17:15 [6]:     Using Calamares QML directory "/usr/share/calamares/qml" 
+2024-08-28 - 16:17:15 [6]: Calamares::Branding::Branding(const QString&, QObject*, qreal)
+2024-08-28 - 16:17:15 [6]:     Using Calamares branding file at "/etc/calamares/branding/lubuntu/branding.desc" 
+2024-08-28 - 16:17:15 [2]: void Calamares::Branding::initSimpleSettings(const YAML::Node&)
+2024-08-28 - 16:17:15 [2]:     WARNING: Branding module-setting *windowPlacement* interpreted as "free" 
+2024-08-28 - 16:17:15 [2]: void Calamares::flavorAndSide(const YAML::Node&, const char*, Branding::PanelFlavor&, Branding::PanelSide&)
+2024-08-28 - 16:17:15 [2]:     WARNING: Branding setting for sidebar is missing, using "widget" "left" 
+2024-08-28 - 16:17:15 [2]: void Calamares::flavorAndSide(const YAML::Node&, const char*, Branding::PanelFlavor&, Branding::PanelSide&)
+2024-08-28 - 16:17:15 [2]:     WARNING: Branding setting for navigation is missing, using "widget" "bottom" 
+2024-08-28 - 16:17:15 [6]: Calamares::Branding::Branding(const QString&, QObject*, qreal)
+2024-08-28 - 16:17:15 [6]:     Loaded branding component "lubuntu" 
+2024-08-28 - 16:17:15 [6]:     .. No translation for "tz_" "C" using default (en) 
+2024-08-28 - 16:17:15 [6]:     .. No translation for "calamares_" "C" using default (en) 
+2024-08-28 - 16:17:15 [6]:     .. STARTUP: initSettings, initQmlPath, initBranding done 
+2024-08-28 - 16:17:15 [6]:     .. STARTUP: initModuleManager: module init started 
+2024-08-28 - 16:17:15 [6]: void Calamares::ModuleManager::doInit()
+2024-08-28 - 16:17:15 [6]:     Found 61 modules 
+2024-08-28 - 16:17:15 [6]: void CalamaresApplication::initView()
+2024-08-28 - 16:17:15 [6]:     STARTUP: initModuleManager: all modules init done 
+2024-08-28 - 16:17:15 [6]: void CalamaresApplication::initView()
+2024-08-28 - 16:17:15 [6]:     STARTUP: initJobQueue done 
+2024-08-28 - 16:17:15 [6]: CalamaresWindow::CalamaresWindow(QWidget*)
+2024-08-28 - 16:17:15 [6]:     Available desktop QSize(1280, 768) minimum size QSize(1024, 520) 
+2024-08-28 - 16:17:15 [6]:     .. Proposed window size: 1024 520 
+2024-08-28 - 16:17:15 [2]: QString Calamares::_stylesheet(const QDir&)
+2024-08-28 - 16:17:15 [2]:     WARNING: The branding component "/etc/calamares/branding/lubuntu" does not ship stylesheet.qss. 
+2024-08-28 - 16:17:15 [6]: void CalamaresApplication::initView()
+2024-08-28 - 16:17:15 [6]:     STARTUP: CalamaresWindow created; loadModules started 
+2024-08-28 - 16:17:15 [6]: void Config::initLanguages()
+2024-08-28 - 16:17:15 [6]:     Trying to match locale "C" 
+2024-08-28 - 16:17:15 [6]: void Config::initLanguages()
+2024-08-28 - 16:17:15 [6]:     Trying to match locale QLocale(C, Default, Default) 
+2024-08-28 - 16:17:15 [6]:     .. Trying to match approximate locale QLocale::C 
+2024-08-28 - 16:17:15 [6]:     .. Trying to match English (US) 
+2024-08-28 - 16:17:15 [6]: void Config::setLocaleIndex(int)
+2024-08-28 - 16:17:15 [6]:     Index 14 Selected locale "en" 
+2024-08-28 - 16:17:15 [6]:     .. Loading "calamares-lubuntu_en" from "/etc/calamares/branding/lubuntu/lang" 
+2024-08-28 - 16:17:15 [6]:     .. Branding no translation for "en" using default (en) 
+2024-08-28 - 16:17:15 [6]:     .. Loaded QRC translation "tz_" "en" 
+2024-08-28 - 16:17:15 [6]:     .. Loaded QRC translation "calamares_" "en" 
+2024-08-28 - 16:17:15 [2]: Calamares::GeoIP::Handler::Handler(const QString&, const QString&, const QString&)
+2024-08-28 - 16:17:15 [2]:     WARNING: GeoIP style *none* does not do anything. 
+2024-08-28 - 16:17:15 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:15 [6]:     ViewModule "welcome@welcome" loading complete. 
+2024-08-28 - 16:17:15 [6]: QStringList loadLocales(const QString&)
+2024-08-28 - 16:17:15 [6]:     Loading locales from "/usr/share/i18n/SUPPORTED" 
+2024-08-28 - 16:17:15 [6]:     ..  Read 510 lines 
+2024-08-28 - 16:17:15 [6]:     ..  After filtering 327 lines 
+2024-08-28 - 16:17:15 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:15 [6]:     ViewModule "locale@locale" loading complete. 
+2024-08-28 - 16:17:15 [2]: void Calamares::Module::loadConfigurationFile(const QString&)
+2024-08-28 - 16:17:15 [2]:     WARNING: No config file for "keyboard" found anywhere at 
+     "/etc/calamares/modules/keyboard.conf" 
+     "/usr/share/calamares/modules/keyboard.conf" 
+2024-08-28 - 16:17:15 [6]: KeyboardModelsModel::KeyboardModelsModel(QObject*)
+2024-08-28 - 16:17:15 [6]:     Loaded 186 keyboard models 
+2024-08-28 - 16:17:15 [6]: KeyboardGroupsSwitchersModel::KeyboardGroupsSwitchersModel(QObject*)
+2024-08-28 - 16:17:15 [6]:     Loaded 40 keyboard groups 
+2024-08-28 - 16:17:15 [6]: KeyboardPage::KeyboardPage(Config*, QWidget*)
+2024-08-28 - 16:17:15 [6]:     Variants now total= 0 selected= -1 
+2024-08-28 - 16:17:15 [6]: KeyboardPage::KeyboardPage(Config*, QWidget*)
+2024-08-28 - 16:17:15 [6]:     Groups now total= 40 selected= -1 
+2024-08-28 - 16:17:15 [6]:     .. Loaded QRC translation "kb_" "en" 
+2024-08-28 - 16:17:15 [6]: void Config::getCurrentKeyboardLayoutXkb(QString&, QString&, QString&)
+2024-08-28 - 16:17:15 [6]:     ("pc", "us", "inet(evdev)\"") 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     ViewModule "keyboard@keyboard" loading complete. 
+2024-08-28 - 16:17:16 [2]: void Calamares::Module::loadConfigurationFile(const QString&)
+2024-08-28 - 16:17:16 [2]:     WARNING: No config file for "pkgselect" found anywhere at 
+     "/etc/calamares/modules/pkgselect.conf" 
+     "/usr/share/calamares/modules/pkgselect.conf" 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     ViewModule "pkgselect@pkgselect" loading complete. 
+2024-08-28 - 16:17:16 [6]: Calamares::Partition::InternalManager::InternalManager()
+2024-08-28 - 16:17:16 [6]:     KPMCore backend starting .. 
+2024-08-28 - 16:17:16 [6]: DEBUG (Qt): Loaded backend plugin:  "pmsfdiskbackendplugin"
+2024-08-28 - 16:17:16 [6]:     .. Backend @0x579889adc3c0 "pmsfdiskbackendplugin" "1" 
+2024-08-28 - 16:17:16 [2]: virtual void PartitionViewStep::setConfigurationMap(const QVariantMap&)
+2024-08-28 - 16:17:16 [2]:     WARNING: Partition-module setting *defaultPartitionTableType* is unset, will use gpt for efi or msdos for bios 
+2024-08-28 - 16:17:16 [2]: QString PartUtils::canonicalFilesystemName(const QString&, FileSystem::Type*)
+2024-08-28 - 16:17:16 [2]:     WARNING: Filesystem "unknown" not found, using ext4 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     ViewModule "partition@partition" loading complete. 
+2024-08-28 - 16:17:16 [6]:     .. minLength set to 1 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     ViewModule "users@users" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     ViewModule "summary@summary" loading complete. 
+2024-08-28 - 16:17:16 [6]: void Calamares::ModuleManager::loadModules()
+2024-08-28 - 16:17:16 [6]:     Module "partition@partition" already loaded. 
+2024-08-28 - 16:17:16 [6]: Calamares::SlideshowQML::SlideshowQML(QWidget*)
+2024-08-28 - 16:17:16 [6]:     QML import paths: 
+     "/usr/share/calamares/qml" 
+     "/usr/bin" 
+     "qrc:/qt-project.org/imports" 
+     "/usr/lib/x86_64-linux-gnu/qt5/qml" 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "machineid@machineid" loading complete. 
+2024-08-28 - 16:17:16 [6]: void Calamares::ModuleManager::loadModules()
+2024-08-28 - 16:17:16 [6]:     Module "locale@locale" already loaded. 
+2024-08-28 - 16:17:16 [6]: void Calamares::ModuleManager::loadModules()
+2024-08-28 - 16:17:16 [6]:     Module "keyboard@keyboard" already loaded. 
+2024-08-28 - 16:17:16 [2]: void Calamares::Module::loadConfigurationFile(const QString&)
+2024-08-28 - 16:17:16 [2]:     WARNING: No config file for "luksbootkeyfile" found anywhere at 
+     "/etc/calamares/modules/luksbootkeyfile.conf" 
+     "/usr/share/calamares/modules/luksbootkeyfile.conf" 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "luksbootkeyfile@luksbootkeyfile" loading complete. 
+2024-08-28 - 16:17:16 [6]: void Calamares::ModuleManager::loadModules()
+2024-08-28 - 16:17:16 [6]:     Module "users@users" already loaded. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "contextualprocess@before_bootloader_mkdirs" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "shellprocess@bug-LP#1829805" loading complete. 
+2024-08-28 - 16:17:16 [2]: void Calamares::Module::loadConfigurationFile(const QString&)
+2024-08-28 - 16:17:16 [2]:     WARNING: No config file for "initramfs" found anywhere at 
+     "/etc/calamares/modules/initramfs.conf" 
+     "/usr/share/calamares/modules/initramfs.conf" 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "initramfs@initramfs" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "contextualprocess@before_bootloader" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "shellprocess@add386arch" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "shellprocess@fixconkeys_part1" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "shellprocess@fixconkeys_part2" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "contextualprocess@pkgselect_action" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "contextualprocess@pkgselect_snap_action" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "shellprocess@logs" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::CppJobModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     CppJobModule "umount@umount" loading complete. 
+2024-08-28 - 16:17:16 [6]: virtual void Calamares::ViewModule::loadSelf()
+2024-08-28 - 16:17:16 [6]:     ViewModule "finished@finished" loading complete. 
+2024-08-28 - 16:17:16 [6]:     .. Loaded QRC translation "kb_" "en" 
+2024-08-28 - 16:17:16 [6]: void CalamaresApplication::initViewSteps()
+2024-08-28 - 16:17:16 [6]:     STARTUP: loadModules for all modules done 
+2024-08-28 - 16:17:16 [6]: void Calamares::ModuleManager::checkRequirements()
+2024-08-28 - 16:17:16 [6]:     Checking module requirements .. 
+2024-08-28 - 16:17:16 [6]: void CalamaresApplication::initViewSteps()
+2024-08-28 - 16:17:16 [6]:     STARTUP: Window now visible and ProgressTreeView populated 
+2024-08-28 - 16:17:16 [6]:     .. 9 view steps loaded. 
+2024-08-28 - 16:17:16 [6]: void Config::xkbApply()
+2024-08-28 - 16:17:16 [6]:     xkbmap selection changed to:  "us" - "" 
+2024-08-28 - 16:17:16 [6]: DEBUG (Qt): smartctl initialization failed for  "/dev/sda" :  No such file or directory
+2024-08-28 - 16:17:16 [6]: DEBUG (Qt): error during smart output parsing for  "/dev/sda" :  Success
+2024-08-28 - 16:17:16 [2]: WARNING (Qt): unknown file system type  ""  on  "/dev/sda"
+2024-08-28 - 16:17:16 [6]: DEBUG (Qt): smartctl initialization failed for  "/dev/zram0" :  No such file or directory
+2024-08-28 - 16:17:16 [6]: DEBUG (Qt): error during smart output parsing for  "/dev/zram0" :  Success
+2024-08-28 - 16:17:16 [6]: QList<Device*> PartUtils::getDevices(DeviceType)
+2024-08-28 - 16:17:16 [6]:     Removing unsuitable devices: 2 candidates. 
+2024-08-28 - 16:17:16 [6]:     .. Running ("blkid", "/dev/sda") 
+2024-08-28 - 16:17:16 [6]:     .. Target cmd: ("blkid", "/dev/sda") Exit code: 2 (no output) 
+2024-08-28 - 16:17:16 [6]:     .. Removing zram "/dev/zram0" 
+2024-08-28 - 16:17:16 [6]:     .. there are 1 devices left. 
+2024-08-28 - 16:17:16 [6]: void PartitionCoreModule::doInit()
+2024-08-28 - 16:17:16 [6]:     LIST OF DETECTED DEVICES: 
+2024-08-28 - 16:17:16 [6]:     .. node	capacity	name	prettyName 
+2024-08-28 - 16:17:16 [6]:     .. "/dev/sda" 34356994560 DevName$d26f65a4 DevNamePretty$28c3883b 
+2024-08-28 - 16:17:16 [6]:     .. 1 devices detected. 
+2024-08-28 - 16:17:17 [6]: OsproberEntryList PartUtils::runOsprober(DeviceModel*)
+2024-08-28 - 16:17:17 [6]:     os-prober gave no output. 
+2024-08-28 - 16:17:17 [2]: void PartitionCoreModule::scanForEfiSystemPartitions()
+2024-08-28 - 16:17:17 [2]:     WARNING: system is EFI but no EFI system partitions found. 
+2024-08-28 - 16:17:17 [6]: void Calamares::RequirementsChecker::addCheckedRequirements(Calamares::Module*)
+2024-08-28 - 16:17:17 [6]:     Got 1 requirement results from "partition" 
+2024-08-28 - 16:17:17 [6]: bool ChoicePage::calculateNextEnabled() const
+2024-08-28 - 16:17:17 [6]:     No partitioning choice has been made yet 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::updateDeviceStatePreview()
+2024-08-28 - 16:17:17 [6]:     Updating partitioning state widgets. 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::setupActions()
+2024-08-28 - 16:17:17 [6]:     Setting up actions for "/dev/sda" with 0 entries. 
+2024-08-28 - 16:17:17 [6]: ChoicePage::setupActions()::<lambda()>
+2024-08-28 - 16:17:17 [6]:     Setting texts for 0 osprober entries 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::setupActions()
+2024-08-28 - 16:17:17 [6]:     No partitions available for replace-action. 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::setupActions()
+2024-08-28 - 16:17:17 [6]:     No partitions available for resize-action. 
+2024-08-28 - 16:17:17 [2]: void ChoicePage::setupActions()
+2024-08-28 - 16:17:17 [2]:     WARNING: System is EFI but there's no EFI system partition, DISABLING alongside and replace features. 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::continueApplyDeviceChoice()
+2024-08-28 - 16:17:17 [6]:     Previous device -1 new device 0 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::applyActionChoice(InstallChoice)
+2024-08-28 - 16:17:17 [6]:     InstallChoice Config::NoChoice "none" 
+2024-08-28 - 16:17:17 [6]: bool ChoicePage::calculateNextEnabled() const
+2024-08-28 - 16:17:17 [6]:     No partitioning choice has been made yet 
+2024-08-28 - 16:17:17 [6]: void ChoicePage::updateActionChoicePreview(InstallChoice)
+2024-08-28 - 16:17:17 [6]:     Updating partitioning preview widgets. 
+2024-08-28 - 16:17:17 [6]: bool ChoicePage::calculateNextEnabled() const
+2024-08-28 - 16:17:17 [6]:     No partitioning choice has been made yet 
+2024-08-28 - 16:17:17 [6]: bool ChoicePage::calculateNextEnabled() const
+2024-08-28 - 16:17:17 [6]:     No partitioning choice has been made yet 
+2024-08-28 - 16:17:17 [6]: void Calamares::RequirementsChecker::reportProgress()
+2024-08-28 - 16:17:17 [6]:     Remaining modules: 5 
+     "partition" 
+     "umount" 
+     "unpackfs" 
+     "users" 
+     "welcome" 
+2024-08-28 - 16:17:17 [6]: QStringList Calamares::GeoIP::getElementTexts(const QByteArray&, const QString&)
+2024-08-28 - 16:17:17 [6]:     GeoIP found 1 elements 
+2024-08-28 - 16:17:18 [6]: Calamares::RequirementsList GeneralRequirements::checkRequirements()
+2024-08-28 - 16:17:18 [6]:     GeneralRequirements output: 
+     storage :   8589934592 
+     enoughStorage :   true 
+     RAM :   536870912 
+     enoughRam :   true 
+     hasPower :   true 
+     hasInternet :   true 
+     isRoot :   true 
+2024-08-28 - 16:17:18 [6]: void Calamares::RequirementsChecker::addCheckedRequirements(Calamares::Module*)
+2024-08-28 - 16:17:18 [6]:     Got 5 requirement results from "welcome" 
+2024-08-28 - 16:17:18 [6]: void Calamares::RequirementsChecker::finished()
+2024-08-28 - 16:17:18 [6]:     All requirements have been checked. 
+2024-08-28 - 16:17:18 [6]: void Calamares::RequirementsModel::describe() const
+2024-08-28 - 16:17:18 [6]:     Requirements model has 6 items 
+2024-08-28 - 16:17:18 [6]:     .. requirement 0 "partitions" satisfied? true mandatory? true 
+2024-08-28 - 16:17:18 [6]:     .. requirement 1 "storage" satisfied? true mandatory? true 
+2024-08-28 - 16:17:18 [6]:     .. requirement 2 "ram" satisfied? true mandatory? true 
+2024-08-28 - 16:17:18 [6]:     .. requirement 3 "power" satisfied? true mandatory? false 
+2024-08-28 - 16:17:18 [6]:     .. requirement 4 "internet" satisfied? true mandatory? false 
+2024-08-28 - 16:17:18 [6]:     .. requirement 5 "root" satisfied? true mandatory? true 
+2024-08-28 - 16:17:32 [6]: static LocaleConfiguration LocaleConfiguration::fromLanguageAndLocation(const QString&, const QStringList&, const QString&)
+2024-08-28 - 16:17:32 [6]:     Mapping "en" in "US" to locale. 
+2024-08-28 - 16:17:32 [6]:     .. Got best match for "en" as "en_AU.UTF-8" 
+2024-08-28 - 16:17:32 [6]:     .. Got best match for "en_US" as "en_US.UTF-8" 
+2024-08-28 - 11:17:33 [6]: static LocaleConfiguration LocaleConfiguration::fromLanguageAndLocation(const QString&, const QStringList&, const QString&)
+2024-08-28 - 11:17:33 [6]:     Mapping "en" in "US" to locale. 
+2024-08-28 - 11:17:33 [6]:     .. Got best match for "en" as "en_AU.UTF-8" 
+2024-08-28 - 11:17:33 [6]:     .. Got best match for "en_US" as "en_US.UTF-8" 
+2024-08-28 - 11:17:33 [6]: static LocaleConfiguration LocaleConfiguration::fromLanguageAndLocation(const QString&, const QStringList&, const QString&)
+2024-08-28 - 11:17:33 [6]:     Mapping "en" in "US" to locale. 
+2024-08-28 - 11:17:33 [6]:     .. Got best match for "en" as "en_AU.UTF-8" 
+2024-08-28 - 11:17:33 [6]:     .. Got best match for "en_US" as "en_US.UTF-8" 
+2024-08-28 - 11:17:36 [6]: void Config::guessLocaleKeyboardLayout()
+2024-08-28 - 11:17:36 [6]:     Got locale language "en_US.UTF-8" 
+2024-08-28 - 11:17:36 [6]:     .. looking for locale part "US" 
+2024-08-28 - 11:17:36 [6]:     .. matched "us" 
+2024-08-28 - 11:17:36 [6]: void guessLayout(const QStringList&, KeyboardLayoutModel*, KeyboardVariantsModel*)
+2024-08-28 - 11:17:36 [6]:     Next level: "en" 
+2024-08-28 - 11:17:58 [6]: void ChoicePage::applyActionChoice(InstallChoice)
+2024-08-28 - 11:17:58 [6]:     InstallChoice Config::Erase "erase" 
+2024-08-28 - 11:17:58 [6]: PartitionTable* CreatePartitionTableJob::createTable()
+2024-08-28 - 11:17:58 [6]:     CreatePartitionTableJob::createTable trying to make table for device "/dev/sda" 
+2024-08-28 - 11:17:59 [2]: void PartitionCoreModule::scanForEfiSystemPartitions()
+2024-08-28 - 11:17:59 [2]:     WARNING: system is EFI but no EFI system partitions found. 
+2024-08-28 - 11:17:59 [6]: void PartitionCoreModule::scanForEfiSystemPartitions()
+2024-08-28 - 11:17:59 [6]:     system is EFI and new EFI system partition has been found. 
+2024-08-28 - 11:17:59 [6]: void PartitionCoreModule::dumpQueue() const
+2024-08-28 - 11:17:59 [6]:     # Queue: 
+2024-08-28 - 11:17:59 [6]:     .. ## Device: "/dev/sda" 
+2024-08-28 - 11:17:59 [6]:     .. - CreatePartitionTableJob 
+2024-08-28 - 11:17:59 [6]:     .. - CreatePartitionJob 
+2024-08-28 - 11:17:59 [6]:     .. - SetPartFlagsJob 
+2024-08-28 - 11:17:59 [6]:     .. - CreatePartitionJob 
+2024-08-28 - 11:17:59 [6]: void ChoicePage::updateActionChoicePreview(InstallChoice)
+2024-08-28 - 11:17:59 [6]:     Updating partitioning preview widgets. 
+2024-08-28 - 11:18:29 [2]: WARNING (Qt): QObject::setParent: Cannot set parent, new parent is in a different thread
+2024-08-28 - 11:18:29 [6]: virtual QString PartitionViewStep::prettyStatus() const
+2024-08-28 - 11:18:29 [6]:     Summary for Partition 1 Config::Erase 
+2024-08-28 - 11:18:29 [6]: QStringList findEssentialLVs(const QList<PartitionCoreModule::DeviceInfo*>&)
+2024-08-28 - 11:18:29 [6]:     Checking LVM use on 1 devices 
+2024-08-28 - 11:18:29 [6]: QVariantList FillGlobalStorageJob::createPartitionList() const
+2024-08-28 - 11:18:29 [6]:     Building partition information map 
+2024-08-28 - 11:18:29 [6]:     .. partitions on "/dev/sda" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "unallocated" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "" 
+     fs: :   "unknown" 
+     fsName :   "unknown" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "false" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/boot/efi" 
+     fs: :   "fat32" 
+     fsName :   "fat32" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "lubuntu_2404" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/" 
+     fs: :   "ext4" 
+     fsName :   "ext4" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [6]: QVariantList FillGlobalStorageJob::createPartitionList() const
+2024-08-28 - 11:18:29 [6]:     Building partition information map 
+2024-08-28 - 11:18:29 [6]:     .. partitions on "/dev/sda" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "unallocated" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "" 
+     fs: :   "unknown" 
+     fsName :   "unknown" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "false" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/boot/efi" 
+     fs: :   "fat32" 
+     fsName :   "fat32" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "lubuntu_2404" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/" 
+     fs: :   "ext4" 
+     fsName :   "ext4" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [2]: WARNING (Qt): QLayout: Attempting to add QLayout "" to QWidget "", which already has a layout
+2024-08-28 - 11:18:29 [2]: WARNING (Qt): QObject::setParent: Cannot set parent, new parent is in a different thread
+2024-08-28 - 11:18:29 [6]: QStringList findEssentialLVs(const QList<PartitionCoreModule::DeviceInfo*>&)
+2024-08-28 - 11:18:29 [6]:     Checking LVM use on 1 devices 
+2024-08-28 - 11:18:29 [6]: QVariantList FillGlobalStorageJob::createPartitionList() const
+2024-08-28 - 11:18:29 [6]:     Building partition information map 
+2024-08-28 - 11:18:29 [6]:     .. partitions on "/dev/sda" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "unallocated" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "" 
+     fs: :   "unknown" 
+     fsName :   "unknown" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "false" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/boot/efi" 
+     fs: :   "fat32" 
+     fsName :   "fat32" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "lubuntu_2404" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/" 
+     fs: :   "ext4" 
+     fsName :   "ext4" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [6]: QVariantList FillGlobalStorageJob::createPartitionList() const
+2024-08-28 - 11:18:29 [6]:     Building partition information map 
+2024-08-28 - 11:18:29 [6]:     .. partitions on "/dev/sda" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "unallocated" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "" 
+     fs: :   "unknown" 
+     fsName :   "unknown" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "false" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/boot/efi" 
+     fs: :   "fat32" 
+     fsName :   "fat32" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:29 [6]:     ..  mapping for "" "New Partition" 
+     partlabel :   "lubuntu_2404" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/" 
+     fs: :   "ext4" 
+     fsName :   "ext4" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "true" 
+2024-08-28 - 11:18:43 [6]: QStringList findEssentialLVs(const QList<PartitionCoreModule::DeviceInfo*>&)
+2024-08-28 - 11:18:43 [6]:     Checking LVM use on 1 devices 
+2024-08-28 - 11:18:43 [6]: void Calamares::JobThread::finalize()
+2024-08-28 - 11:18:43 [6]:     There are 42 jobs, total weight 40 
+2024-08-28 - 11:18:43 [6]:     .. Job 1 "Managing auto-mount settings…" +wt 0.111111 tot.wt 0.111111 
+2024-08-28 - 11:18:43 [6]:     .. Job 2 "Clearing all temporary mounts…" +wt 0.111111 tot.wt 0.222222 
+2024-08-28 - 11:18:43 [6]:     .. Job 3 "Clear mounts for partitioning operations on /dev/sda" +wt 0.111111 tot.wt 0.333333 
+2024-08-28 - 11:18:43 [6]:     .. Job 4 "Creating new gpt partition table on /dev/sda…" +wt 0.111111 tot.wt 0.444444 
+2024-08-28 - 11:18:43 [6]:     .. Job 5 "Create new 300MiB partition on /dev/sda (VBOX HARDDISK)" +wt 0.111111 tot.wt 0.555556 
+2024-08-28 - 11:18:43 [6]:     .. Job 6 "Set flags on 300MiB fat32 partition" +wt 0.111111 tot.wt 0.666667 
+2024-08-28 - 11:18:43 [6]:     .. Job 7 "Create new 32463MiB partition on /dev/sda (VBOX HARDDISK) with entries lubuntu_2404" +wt 0.111111 tot.wt 0.777778 
+2024-08-28 - 11:18:43 [6]:     .. Job 8 "Set partition information" +wt 0.111111 tot.wt 0.888889 
+2024-08-28 - 11:18:43 [6]:     .. Job 9 "Managing auto-mount settings…" +wt 0.111111 tot.wt 1 
+2024-08-28 - 11:18:43 [6]:     .. Job 10 "mount" +wt 1 tot.wt 2 
+2024-08-28 - 11:18:43 [6]:     .. Job 11 "unpackfs" +wt 12 tot.wt 14 
+2024-08-28 - 11:18:43 [6]:     .. Job 12 "Generate machine-id." +wt 1 tot.wt 15 
+2024-08-28 - 11:18:43 [6]:     .. Job 13 "fstab" +wt 1 tot.wt 16 
+2024-08-28 - 11:18:43 [6]:     .. Job 14 "Setting timezone to America/Chicago…" +wt 1 tot.wt 17 
+2024-08-28 - 11:18:43 [6]:     .. Job 15 "Setting keyboard model to pc105, layout as us-…" +wt 1 tot.wt 18 
+2024-08-28 - 11:18:43 [6]:     .. Job 16 "localecfg" +wt 1 tot.wt 19 
+2024-08-28 - 11:18:43 [6]:     .. Job 17 "Configuring LUKS key file." +wt 1 tot.wt 20 
+2024-08-28 - 11:18:43 [6]:     .. Job 18 "Configuring <pre>sudo</pre> users…" +wt 0.166667 tot.wt 20.1667 
+2024-08-28 - 11:18:43 [6]:     .. Job 19 "Preparing groups…" +wt 0.166667 tot.wt 20.3333 
+2024-08-28 - 11:18:43 [6]:     .. Job 20 "Create user ryan" +wt 0.166667 tot.wt 20.5 
+2024-08-28 - 11:18:43 [6]:     .. Job 21 "Set password for user ryan" +wt 0.166667 tot.wt 20.6667 
+2024-08-28 - 11:18:43 [6]:     .. Job 22 "Set password for user root" +wt 0.166667 tot.wt 20.8333 
+2024-08-28 - 11:18:43 [6]:     .. Job 23 "Set hostname vlub" +wt 0.166667 tot.wt 21 
+2024-08-28 - 11:18:43 [6]:     .. Job 24 "displaymanager" +wt 1 tot.wt 22 
+2024-08-28 - 11:18:43 [6]:     .. Job 25 "networkcfg" +wt 1 tot.wt 23 
+2024-08-28 - 11:18:43 [6]:     .. Job 26 "hwclock" +wt 1 tot.wt 24 
+2024-08-28 - 11:18:43 [6]:     .. Job 27 "Performing contextual processes' job…" +wt 1 tot.wt 25 
+2024-08-28 - 11:18:43 [6]:     .. Job 28 "Running shell processes…" +wt 1 tot.wt 26 
+2024-08-28 - 11:18:43 [6]:     .. Job 29 "initramfscfg" +wt 1 tot.wt 27 
+2024-08-28 - 11:18:43 [6]:     .. Job 30 "Creating initramfs…" +wt 1 tot.wt 28 
+2024-08-28 - 11:18:43 [6]:     .. Job 31 "grubcfg" +wt 1 tot.wt 29 
+2024-08-28 - 11:18:43 [6]:     .. Job 32 "Performing contextual processes' job…" +wt 1 tot.wt 30 
+2024-08-28 - 11:18:43 [6]:     .. Job 33 "bootloader" +wt 1 tot.wt 31 
+2024-08-28 - 11:18:43 [6]:     .. Job 34 "automirror" +wt 1 tot.wt 32 
+2024-08-28 - 11:18:43 [6]:     .. Job 35 "Running shell processes…" +wt 1 tot.wt 33 
+2024-08-28 - 11:18:43 [6]:     .. Job 36 "Running shell processes…" +wt 1 tot.wt 34 
+2024-08-28 - 11:18:43 [6]:     .. Job 37 "Running shell processes…" +wt 1 tot.wt 35 
+2024-08-28 - 11:18:43 [6]:     .. Job 38 "packages" +wt 1 tot.wt 36 
+2024-08-28 - 11:18:43 [6]:     .. Job 39 "Performing contextual processes' job…" +wt 1 tot.wt 37 
+2024-08-28 - 11:18:43 [6]:     .. Job 40 "Performing contextual processes' job…" +wt 1 tot.wt 38 
+2024-08-28 - 11:18:43 [6]:     .. Job 41 "Running shell processes…" +wt 1 tot.wt 39 
+2024-08-28 - 11:18:43 [6]:     .. Job 42 "Unmounting file systems…" +wt 1 tot.wt 40 
+2024-08-28 - 11:18:43 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:43 [6]:     Starting job "Managing auto-mount settings…" ( 1 / 42 ) 
+2024-08-28 - 11:18:43 [6]: virtual Calamares::JobResult AutoMountManagementJob::exec()
+2024-08-28 - 11:18:43 [6]:     Set automount to disable 
+2024-08-28 - 11:18:43 [6]: void Calamares::Partition::querySolidAutoMount(QDBusConnection&, AutoMountInfo&)
+2024-08-28 - 11:18:43 [6]:     Solid not available: "Not connected to D-Bus server" 
+2024-08-28 - 11:18:43 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:43 [6]:     Starting job "Clearing all temporary mounts…" ( 2 / 42 ) 
+2024-08-28 - 11:18:43 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:43 [6]:     Starting job "Clear mounts for partitioning operations on /dev/sda" ( 3 / 42 ) 
+2024-08-28 - 11:18:43 [6]: QStringList getPartitionsForDevice(const QString&)
+2024-08-28 - 11:18:43 [6]:     Reading from "/proc/partitions" looking for "sda" 
+2024-08-28 - 11:18:43 [6]: virtual Calamares::JobResult ClearMountsJob::exec()
+2024-08-28 - 11:18:43 [6]:     ClearMountsJob finished. Here's what was done: 
+2024-08-28 - 11:18:43 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:43 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:43 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:43 [6]:     Starting job "Creating new gpt partition table on /dev/sda…" ( 4 / 42 ) 
+2024-08-28 - 11:18:43 [6]: virtual Calamares::JobResult CreatePartitionTableJob::exec()
+2024-08-28 - 11:18:43 [6]:     Creating new partition table of type "gpt" , uncommitted partitions: 
+2024-08-28 - 11:18:43 [6]:     .. "unallocated" 
+2024-08-28 - 11:18:43 [6]:     .. "New Partition" 
+2024-08-28 - 11:18:43 [6]:     .. "New Partition" 
+2024-08-28 - 11:18:43 [6]:     .. Running ("lsblk") 
+2024-08-28 - 11:18:43 [6]:     .. lsblk output:
+ NAME  MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0   7:0    0   2.9G  1 loop /rofs
+loop1   7:1    0     4K  1 loop /snap/bare/5
+loop2   7:2    0 269.6M  1 loop /snap/firefox/4173
+loop3   7:3    0  74.2M  1 loop /snap/core22/1380
+loop4   7:4    0 505.1M  1 loop /snap/gnome-42-2204/176
+loop5   7:5    0  10.7M  1 loop /snap/firmware-updater/127
+loop6   7:6    0  91.7M  1 loop /snap/gtk-common-themes/1535
+loop7   7:7    0  38.7M  1 loop /snap/snapd/21465
+sda     8:0    0    32G  0 disk 
+sr0    11:0    1   3.1G  0 rom  /cdrom
+zram0 251:0    0   976M  0 disk [SWAP]
+2024-08-28 - 11:18:43 [6]:     .. Running ("mount") 
+2024-08-28 - 11:18:43 [6]:     .. mount output:
+ sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=957704k,nr_inodes=239426,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=199880k,mode=755,inode64)
+/dev/sr0 on /cdrom type iso9660 (ro,noatime,nojoliet,check=s,map=n,blocksize=2048,iocharset=utf8)
+/dev/loop0 on /rofs type squashfs (ro,noatime,errors=continue,threads=single)
+/cow on / type overlay (rw,relatime,lowerdir=/filesystem.squashfs,upperdir=/cow/upper,workdir=/cow/work,uuid=on,xino=off,nouserxattr)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=967)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/var/lib/snapd/snaps/bare_5.snap on /snap/bare/5 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/firefox_4173.snap on /snap/firefox/4173 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core22_1380.snap on /snap/core22/1380 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/firmware-updater_127.snap on /snap/firmware-updater/127 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/gnome-42-2204_176.snap on /snap/gnome-42-2204/176 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev,relatime,inode64)
+/var/lib/snapd/snaps/gtk-common-themes_1535.snap on /snap/gtk-common-themes/1535 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/snapd_21465.snap on /snap/snapd/21465 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=199876k,nr_inodes=49969,mode=700,uid=1000,gid=1000,inode64)
+tmpfs on /run/snapd/ns type tmpfs (rw,nosuid,nodev,noexec,relatime,size=199880k,mode=755,inode64)
+nsfs on /run/snapd/ns/firefox.mnt type nsfs (rw)
+/cow on /var/snap/firefox/common/host-hunspell type overlay (ro,noexec,noatime,lowerdir=/filesystem.squashfs,upperdir=/cow/upper,workdir=/cow/work,uuid=on,xino=off,nouserxattr)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+nsfs on /run/snapd/ns/firmware-updater.mnt type nsfs (rw)
+2024-08-28 - 11:18:44 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:44 [6]:     Starting job "Create new 300MiB partition on /dev/sda (VBOX HARDDISK)" ( 5 / 42 ) 
+2024-08-28 - 11:18:45 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:45 [6]:     Starting job "Set flags on partition /dev/sda1" ( 6 / 42 ) 
+2024-08-28 - 11:18:45 [6]: virtual Calamares::JobResult SetPartFlagsJob::exec()
+2024-08-28 - 11:18:45 [6]:     Setting flags on "/dev/sda" partition "/dev/sda1" 
+     "boot" 
+2024-08-28 - 11:18:46 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:46 [6]:     Starting job "Create new 32463MiB partition on /dev/sda (VBOX HARDDISK) with entries lubuntu_2404" ( 7 / 42 ) 
+2024-08-28 - 11:18:48 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:48 [6]:     Starting job "Set partition information" ( 8 / 42 ) 
+2024-08-28 - 11:18:48 [6]: QVariantList FillGlobalStorageJob::createPartitionList() const
+2024-08-28 - 11:18:48 [6]:     Building partition information map 
+2024-08-28 - 11:18:48 [6]:     .. partitions on "/dev/sda" 
+2024-08-28 - 11:18:48 [6]:     ..  mapping for "" "unallocated" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$46b39a97" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "" 
+     fs: :   "unknown" 
+     fsName :   "unknown" 
+     filesystem-uuid (uuid) :   "FSUUID$b5a1f49a" 
+     claimed :   "false" 
+2024-08-28 - 11:18:48 [6]:     ..  mapping for "/dev/sda1" "/dev/sda1" 
+     partlabel :   "" 
+     partition-uuid (partuuid) :   "PartUUID$9714fc20" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/boot/efi" 
+     fs: :   "fat32" 
+     fsName :   "fat32" 
+     filesystem-uuid (uuid) :   "FSUUID$47109490" 
+     claimed :   "true" 
+2024-08-28 - 11:18:48 [6]:     ..  mapping for "/dev/sda2" "/dev/sda2" 
+     partlabel :   "lubuntu_2404" 
+     partition-uuid (partuuid) :   "PartUUID$9cefbde6" 
+     parttype :   "" 
+     partattrs :   "0" 
+     mountPoint: :   "/" 
+     fs: :   "ext4" 
+     fsName :   "ext4" 
+     filesystem-uuid (uuid) :   "FSUUID$a647cca" 
+     claimed :   "true" 
+2024-08-28 - 11:18:48 [6]: virtual Calamares::JobResult FillGlobalStorageJob::exec()
+2024-08-28 - 11:18:48 [6]:     Saving partition information map to GlobalStorage["partitions"] 
+2024-08-28 - 11:18:48 [6]: virtual Calamares::JobResult FillGlobalStorageJob::exec()
+2024-08-28 - 11:18:48 [6]:     FillGlobalStorageJob writing empty bootLoader value 
+2024-08-28 - 11:18:48 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:48 [6]:     Starting job "Managing auto-mount settings…" ( 9 / 42 ) 
+2024-08-28 - 11:18:48 [6]: virtual Calamares::JobResult AutoMountManagementJob::exec()
+2024-08-28 - 11:18:48 [6]:     Restore automount settings 
+2024-08-28 - 11:18:48 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:48 [6]:     Starting job "mount" ( 10 / 42 ) 
+2024-08-28 - 11:18:49 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "ext4", "-o", "defaults", "/dev/sda2", "/tmp/calamares-root-5w93ywqp/") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "vfat", "-o", "defaults", "/dev/sda1", "/tmp/calamares-root-5w93ywqp/boot/efi") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-o", "bind", "/dev", "/tmp/calamares-root-5w93ywqp/dev") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "proc", "-o", "defaults", "proc", "/tmp/calamares-root-5w93ywqp/proc") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "tmpfs", "-o", "defaults", "tmpfs", "/tmp/calamares-root-5w93ywqp/run") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-o", "bind", "/run/systemd/resolve", "/tmp/calamares-root-5w93ywqp/run/systemd/resolve") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-o", "bind", "/run/udev", "/tmp/calamares-root-5w93ywqp/run/udev") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "sysfs", "-o", "defaults", "sys", "/tmp/calamares-root-5w93ywqp/sys") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "efivarfs", "-o", "defaults", "efivarfs", "/tmp/calamares-root-5w93ywqp/sys/firmware/efi/efivars") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:18:49 [6]:     Starting job "unpackfs" ( 11 / 42 ) 
+2024-08-28 - 11:18:49 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:18:49 [6]:     .. Running ("mount", "-t", "squashfs", "-o", "loop", "/cdrom/casper/filesystem.squashfs", "/tmp/tmpoasztg5b/filesystem") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("sync") 
+2024-08-28 - 11:18:49 [6]:     .. Running ("unsquashfs", "-l", "/cdrom/casper/filesystem.squashfs") 
+2024-08-28 - 11:18:50 [6]:     .. Running ("rsync", "-aHAXSr", "--filter=-x trusted.overlay.*", "--exclude", "/proc/", "--exclude", "/sys/", "--exclude", "/dev/", "--exclude", "/run/", "--exclude", "/run/udev/", "--exclude", "/sys/firmware/efi/efivars/", "--exclude", "/run/systemd/resolve/", "--progress", "/tmp/tmpoasztg5b/filesystem/", "/tmp/calamares-root-5w93ywqp") 
+2024-08-28 - 11:20:11 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:11 [6]:     Starting job "Generate machine-id." ( 12 / 42 ) 
+2024-08-28 - 11:20:11 [6]:     .. Running ("systemd-machine-id-setup", "--root=/tmp/calamares-root-5w93ywqp") 
+2024-08-28 - 11:20:11 [6]:     .. Running ("ln", "-sf", "/etc/machine-id", "/var/lib/dbus/machine-id") 
+2024-08-28 - 11:20:11 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:11 [6]:     Starting job "fstab" ( 13 / 42 ) 
+2024-08-28 - 11:20:11 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:20:12 [6]:     .. Running ("mkswap", "/tmp/calamares-root-5w93ywqp/swapfile") 
+2024-08-28 - 11:20:12 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:12 [6]:     Starting job "Setting timezone to America/Chicago…" ( 14 / 42 ) 
+2024-08-28 - 11:20:12 [6]:     .. Running ("rm", "-f", "/etc/localtime") 
+2024-08-28 - 11:20:12 [6]:     .. Running ("ln", "-s", "/usr/share/zoneinfo/America/Chicago", "/etc/localtime") 
+2024-08-28 - 11:20:12 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:12 [6]:     Starting job "Setting keyboard model to pc105, layout as us-…" ( 15 / 42 ) 
+2024-08-28 - 11:20:12 [6]: virtual Calamares::JobResult SetKeyboardLayoutJob::exec()
+2024-08-28 - 11:20:12 [6]:     Executing SetKeyboardLayoutJob 
+2024-08-28 - 11:20:12 [6]: bool SetKeyboardLayoutJob::writeVConsoleData(const QString&, const QString&) const
+2024-08-28 - 11:20:12 [6]:     Writing vconsole data to "/tmp/calamares-root-5w93ywqp/etc/vconsole.conf" 
+2024-08-28 - 11:20:12 [6]: QString SetKeyboardLayoutJob::findConvertedKeymap(const QString&) const
+2024-08-28 - 11:20:12 [6]:     Looking for converted keymap in "" 
+2024-08-28 - 11:20:12 [6]: QString findLegacyKeymap(const QString&, const QString&, const QString&)
+2024-08-28 - 11:20:12 [6]:     Looking for legacy keymap "us" "pc105" "" in QRC 
+2024-08-28 - 11:20:12 [6]:     .. Found legacy keymap "us" with score 11 
+2024-08-28 - 11:20:12 [6]:     .. Found legacy keymap "us-acentos" with score 11 
+2024-08-28 - 11:20:12 [6]:     .. Found legacy keymap "dvorak" with score 11 
+2024-08-28 - 11:20:12 [6]:     .. Found legacy keymap "dvorak" with score 11 
+2024-08-28 - 11:20:12 [6]:     .. Written KEYMAP= "us" to vconsole.conf 0 
+2024-08-28 - 11:20:12 [6]: bool SetKeyboardLayoutJob::writeX11Data(const QString&) const
+2024-08-28 - 11:20:12 [6]:     Writing X11 configuration to "/tmp/calamares-root-5w93ywqp/etc/X11/xorg.conf.d/00-keyboard.conf" 
+2024-08-28 - 11:20:12 [6]:     .. Written XkbLayout "us" ; XkbModel "pc105" ; XkbVariant "" to X.org file "/tmp/calamares-root-5w93ywqp/etc/X11/xorg.conf.d/00-keyboard.conf" 0 
+2024-08-28 - 11:20:12 [6]: bool SetKeyboardLayoutJob::writeDefaultKeyboardData(const QString&) const
+2024-08-28 - 11:20:12 [6]:     Writing default keyboard data to "/tmp/calamares-root-5w93ywqp/etc/default/keyboard" 
+2024-08-28 - 11:20:12 [6]:     .. Written XKBMODEL "pc105" ; XKBLAYOUT "us" ; XKBVARIANT "" to /etc/default/keyboard file "/tmp/calamares-root-5w93ywqp/etc/default/keyboard" 0 
+2024-08-28 - 11:20:12 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:12 [6]:     Starting job "localecfg" ( 16 / 42 ) 
+2024-08-28 - 11:20:12 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:20:12 [6]:     .. Running ("locale-gen") 
+2024-08-28 - 11:20:41 [6]: [PYTHON JOB]: "/tmp/calamares-root-5w93ywqp/etc/locale.gen done" 
+2024-08-28 - 11:20:41 [6]: [PYTHON JOB]: "/tmp/calamares-root-5w93ywqp/etc/locale.conf done" 
+2024-08-28 - 11:20:41 [6]: [PYTHON JOB]: "/tmp/calamares-root-5w93ywqp/etc/default done" 
+2024-08-28 - 11:20:41 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:41 [6]:     Starting job "Configuring LUKS key file." ( 17 / 42 ) 
+2024-08-28 - 11:20:41 [6]: virtual Calamares::JobResult LuksBootKeyFileJob::exec()
+2024-08-28 - 11:20:41 [6]:     There are 0 LUKS partitions 
+2024-08-28 - 11:20:41 [6]:     .. Nothing to do for LUKS. 
+2024-08-28 - 11:20:41 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:41 [6]:     Starting job "Configuring <pre>sudo</pre> users…" ( 18 / 42 ) 
+2024-08-28 - 11:20:41 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:41 [6]:     Starting job "Preparing groups…" ( 19 / 42 ) 
+2024-08-28 - 11:20:41 [6]:     .. Running ("groupadd", "--system", "sambashare") 
+2024-08-28 - 11:20:41 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:41 [6]:     Starting job "Create user ryan" ( 20 / 42 ) 
+2024-08-28 - 11:20:41 [6]: virtual Calamares::JobResult CreateUserJob::exec()
+2024-08-28 - 11:20:41 [6]:     [CREATEUSER]: creating user 
+2024-08-28 - 11:20:41 [6]:     .. Running ("useradd", "-m", "-U", "-s", "/bin/bash", "-c", "Beavis", "ryan") 
+2024-08-28 - 11:20:41 [6]:     .. Running "usermod" "-aG" "adm,cdrom,dip,lpadmin,plugdev,sambashare,sudo" "ryan" 
+2024-08-28 - 11:20:41 [6]:     .. Running ("chown", "-R", "ryan:ryan", "/home/ryan") 
+2024-08-28 - 11:20:41 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:41 [6]:     Starting job "Set password for user ryan" ( 21 / 42 ) 
+2024-08-28 - 11:20:41 [6]:     .. Running "usermod" "-p" "$y$j9T$u/1mX7tiZI3L7E6H3Tzhq/$T1vDAdMQWFGufYKWLdme9ssifSk2VwGV1RYeDxYKbG1" "ryan" 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "Set password for user root" ( 22 / 42 ) 
+2024-08-28 - 11:20:42 [6]:     .. Running "usermod" "-p" "!" "root" 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "Set hostname vlub" ( 23 / 42 ) 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "displaymanager" ( 24 / 42 ) 
+2024-08-28 - 11:20:42 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:20:42 [2]: WARNING: [PYTHON JOB]: "The configured default desktop environment, Lubuntu, can not be found." 
+2024-08-28 - 11:20:42 [2]: Calamares::Python::Object Calamares::Python::GlobalStorageProxy::value(const std::string&) const
+2024-08-28 - 11:20:42 [2]:     WARNING: Unknown GS key autoLoginUser 
+2024-08-28 - 11:20:42 [6]: [PYTHON JOB]: "Unsetting autologin." 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "networkcfg" ( 25 / 42 ) 
+2024-08-28 - 11:20:42 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "hwclock" ( 26 / 42 ) 
+2024-08-28 - 11:20:42 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:20:42 [6]:     .. Running ("hwclock", "--systohc", "--utc") 
+2024-08-28 - 11:20:42 [6]: [PYTHON JOB]: "Hwclock set using RTC method." 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "Performing contextual processes' job…" ( 27 / 42 ) 
+2024-08-28 - 11:20:42 [6]:     .. Running ("/bin/sh", "-c", "cp /cdrom/casper/vmlinuz /tmp/calamares-root-5w93ywqp/boot/vmlinuz-$(uname -r)") 
+2024-08-28 - 11:20:42 [6]:     .. Running ("/bin/sh", "-c", "mkdir -pv /tmp/calamares-root-5w93ywqp/media/cdrom") 
+2024-08-28 - 11:20:42 [6]:     .. Running ("/bin/sh", "-c", "mount --bind /cdrom /tmp/calamares-root-5w93ywqp/media/cdrom") 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "Running shell processes…" ( 28 / 42 ) 
+2024-08-28 - 11:20:42 [6]:     .. Running ("/bin/sh", "-c", "touch //boot/initrd.img-$(uname -r)") 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "initramfscfg" ( 29 / 42 ) 
+2024-08-28 - 11:20:42 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:20:42 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:20:42 [6]:     Starting job "Creating initramfs…" ( 30 / 42 ) 
+2024-08-28 - 11:20:42 [6]: virtual Calamares::JobResult InitramfsJob::exec()
+2024-08-28 - 11:20:42 [6]:     Updating initramfs with kernel "all" 
+2024-08-28 - 11:20:42 [6]:     .. Running ("update-initramfs", "-k", "all", "-c", "-t") 
+2024-08-28 - 11:21:00 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:00 [6]:     Starting job "grubcfg" ( 31 / 42 ) 
+2024-08-28 - 11:21:00 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:21:00 [6]:     .. Running ("sh", "-c", "which dracut") 
+2024-08-28 - 11:21:00 [6]:     .. Target cmd: ("sh", "-c", "which dracut") Exit code: 1 (no output) 
+2024-08-28 - 11:21:00 [6]:     .. Running ("sh", "-c", "which plymouth") 
+2024-08-28 - 11:21:00 [6]:     .. Running ("sh", "-c", "grep -q \"^HOOKS.*systemd\" /etc/mkinitcpio.conf") 
+2024-08-28 - 11:21:00 [6]:     .. Target cmd: ("sh", "-c", "grep -q \"^HOOKS.*systemd\" /etc/mkinitcpio.conf") Exit code: 2 output:
+ grep: /etc/mkinitcpio.conf: No such file or directory
+2024-08-28 - 11:21:00 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:00 [6]:     Starting job "Performing contextual processes' job…" ( 32 / 42 ) 
+2024-08-28 - 11:21:00 [6]:     .. Running ("/bin/sh", "-c", "apt-cdrom add -m -d=/media/cdrom/") 
+2024-08-28 - 11:21:00 [6]:     .. Running ("/bin/sh", "-c", "sed -i '/deb http/d' /etc/apt/sources.list") 
+2024-08-28 - 11:21:00 [6]:     .. Running ("/bin/sh", "-c", "apt-get update") 
+2024-08-28 - 11:21:01 [6]:     .. Running ("/bin/sh", "-c", "apt install -y --no-upgrade -o Acquire::gpgv::Options::=--ignore-time-conflict grub-efi-$(if grep -q 64 /sys/firmware/efi/fw_platform_size; then echo amd64-signed; else echo ia32; fi)") 
+2024-08-28 - 11:21:05 [6]:     .. Running ("/bin/sh", "-c", "apt install -y --no-upgrade -o Acquire::gpgv::Options::=--ignore-time-conflict shim-signed") 
+2024-08-28 - 11:21:06 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:06 [6]:     Starting job "bootloader" ( 33 / 42 ) 
+2024-08-28 - 11:21:07 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:21:07 [6]: [PYTHON JOB]: "Bootloader: grub (efi)" 
+2024-08-28 - 11:21:07 [6]:     .. Running ("grub-install", "--target=x86_64-efi", "--efi-directory=/boot/efi", "--bootloader-id=ubuntu", "--force") 
+2024-08-28 - 11:21:09 [6]:     .. Running ("/usr/bin/debconf-set-selections", "/tmp/tmp0bre0tcl") 
+2024-08-28 - 11:21:09 [6]: [PYTHON JOB]: "UEFI Fallback: <unset>" 
+2024-08-28 - 11:21:09 [6]: [PYTHON JOB]: "  .. installing 'bootx64.efi' fallback firmware" 
+2024-08-28 - 11:21:09 [6]:     .. Running ("grub-mkconfig", "-o", "/boot/grub/grub.cfg") 
+2024-08-28 - 11:21:11 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:11 [6]:     Starting job "automirror" ( 34 / 42 ) 
+2024-08-28 - 11:21:12 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:12 [6]:     Starting job "Running shell processes…" ( 35 / 42 ) 
+2024-08-28 - 11:21:12 [6]:     .. Running ("/bin/sh", "-c", "/usr/bin/dpkg --add-architecture i386") 
+2024-08-28 - 11:21:12 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:12 [6]:     Starting job "Running shell processes…" ( 36 / 42 ) 
+2024-08-28 - 11:21:12 [6]:     .. Running ("/bin/sh", "-c", "/usr/libexec/fixconkeys-part1 /tmp/calamares-root-5w93ywqp") 
+2024-08-28 - 11:21:12 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:12 [6]:     Starting job "Running shell processes…" ( 37 / 42 ) 
+2024-08-28 - 11:21:12 [6]:     .. Running ("/bin/sh", "-c", "/usr/libexec/fixconkeys-part2") 
+2024-08-28 - 11:21:25 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:25 [6]:     Starting job "packages" ( 38 / 42 ) 
+2024-08-28 - 11:21:25 [6]: [PYTHON JOB]: Found gettext "en_US" in "/usr/share/locale/en_US" 
+2024-08-28 - 11:21:25 [6]:     .. Running ("apt-get", "update") 
+2024-08-28 - 11:21:42 [6]: [PYTHON JOB]: "Install packages." 
+2024-08-28 - 11:21:42 [6]:     .. Running ("apt-get", "--purge", "-q", "-y", "remove", "^live-*", "calamares-settings-lubuntu", "calamares", "zram-config", "cifs-utils", "lubuntu-installer-prompt") 
+2024-08-28 - 11:21:51 [6]:     .. Running ("apt-get", "--purge", "-q", "-y", "autoremove") 
+2024-08-28 - 11:21:55 [6]: [PYTHON JOB]: "Pretty name: Install packages., setting progress.." 
+2024-08-28 - 11:21:55 [6]: [PYTHON JOB]: "Install packages." 
+2024-08-28 - 11:21:55 [6]: [PYTHON JOB]: "Pretty name: Install packages., setting progress.." 
+2024-08-28 - 11:21:55 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:21:55 [6]:     Starting job "Performing contextual processes' job…" ( 39 / 42 ) 
+2024-08-28 - 11:21:55 [2]: virtual Calamares::JobResult ContextualProcessJob::exec()
+2024-08-28 - 11:21:55 [2]:     WARNING: ContextualProcess checks for unknown variable "packages.minimalButton" 
+2024-08-28 - 11:21:55 [2]: virtual Calamares::JobResult ContextualProcessJob::exec()
+2024-08-28 - 11:21:55 [2]:     WARNING: ContextualProcess checks for unknown variable "packages.partyButton" 
+2024-08-28 - 11:21:55 [6]:     .. Running ("/bin/sh", "-c", "DEBIAN_FRONTEND=noninteractive apt-get update") 
+2024-08-28 - 11:21:57 [6]:     .. Running ("/bin/sh", "-c", "DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::='--force-confnew' full-upgrade") 
+2024-08-28 - 11:31:53 [2]: virtual Calamares::JobResult ContextualProcessJob::exec()
+2024-08-28 - 11:31:53 [2]:     WARNING: ContextualProcess checks for unknown variable "packages.virtmanagerButton" 
+2024-08-28 - 11:31:53 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:31:53 [6]:     Starting job "Performing contextual processes' job…" ( 40 / 42 ) 
+2024-08-28 - 11:31:53 [2]: virtual Calamares::JobResult ContextualProcessJob::exec()
+2024-08-28 - 11:31:53 [2]:     WARNING: ContextualProcess checks for unknown variable "packages.elementButton" 
+2024-08-28 - 11:31:53 [2]: virtual Calamares::JobResult ContextualProcessJob::exec()
+2024-08-28 - 11:31:53 [2]:     WARNING: ContextualProcess checks for unknown variable "packages.kritaButton" 
+2024-08-28 - 11:31:53 [2]: virtual Calamares::JobResult ContextualProcessJob::exec()
+2024-08-28 - 11:31:53 [2]:     WARNING: ContextualProcess checks for unknown variable "packages.thunderbirdButton" 
+2024-08-28 - 11:31:53 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:31:53 [6]:     Starting job "Running shell processes…" ( 41 / 42 ) 
+2024-08-28 - 11:31:53 [6]:     .. Running ("/bin/sh", "-c", "calamares-logs-helper /tmp/calamares-root-5w93ywqp") 
+2024-08-28 - 11:31:53 [6]: virtual void Calamares::JobThread::run()
+2024-08-28 - 11:31:53 [6]:     Starting job "Unmounting file systems…" ( 42 / 42 ) 
+2024-08-28 - 11:31:53 [6]: Calamares::JobResult unmountTargetMounts(const QString&)
+2024-08-28 - 11:31:53 [6]:     Read 9 entries from "/tmp/calamares-root-5w93ywqp/" 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/sys/firmware/efi/efivars") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/sys") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/run/udev") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/run/systemd/resolve") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/run") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/proc") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/media/cdrom") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/dev") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("umount", "-lv", "/tmp/calamares-root-5w93ywqp/boot/efi") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("udevadm", "settle") 
+2024-08-28 - 11:31:53 [6]:     .. Running ("sync") 
+2024-08-28 - 11:31:54 [6]: void Config::doNotify(bool, bool)
+2024-08-28 - 11:31:54 [6]:     Notification not sent; completion: succeeded 
