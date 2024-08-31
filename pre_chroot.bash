@@ -26,6 +26,11 @@ POOL_SIZE="-10m"
 POOL_NAME="zlubuntu"
 NEW_ROOT="/mnt-$(cat /etc/machine-id)"
 #
+# DANGER!!! If you are installing to a disk that already has other
+# partitions, COMMENT OUT THE FOLLOWING 3 (or 4) lines...
+# AND make sure you edit the *_PART variables above for your situation...
+# e.g. if you are sharing the disk with MicroSchlock Windoze these lines WILL NUKE
+# ALL OTHER PARTITIONS ON THE DISK!!!!!
 wipefs -af $DISK
 sgdisk --zap-all $DISK
 partprobe $DISK
