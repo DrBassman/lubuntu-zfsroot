@@ -119,4 +119,9 @@ cp /cdrom/casper/vmlinuz "${NEW_ROOT}"/boot/vmlinuz-$(uname -r)
 mkdir -pv "${NEW_ROOT}"/media/cdrom
 mount --bind /cdrom "${NEW_ROOT}"/media/cdrom
 
+#
+cp post_chroot.bash "${NEW_ROOT}"
+chroot "${NEW_ROOT}" /bin/bash /post_chroot.bash
+umount -n -R "${NEW_ROOT}"
+zpool export ${POOL_NAME}
 echo "End of $0"
