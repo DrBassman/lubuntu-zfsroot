@@ -14,6 +14,8 @@ modprobe zfs
 #  Define variables.  Change these to suit BEFORE running script...
 #
 DISK=/dev/sda
+FORMAT_EFI=1
+FORMAT_DISK=1
 EFI_PART=1
 SWAP_PART=2
 POOL_PART=3
@@ -31,17 +33,23 @@ NEW_ROOT="/mnt-$(cat /etc/machine-id)"
 # AND make sure you edit the *_PART variables above for your situation...
 # e.g. if you are sharing the disk with MicroSchlock Windoze these lines WILL NUKE
 # ALL OTHER PARTITIONS ON THE DISK!!!!!
-wipefs -af $DISK
-sgdisk --zap-all $DISK
+if [ ${FORMAT_DISK} -eq 1 ]; then
+    wipefs -af $DISK
+    sgdisk --zap-all $DISK
+fi
 partprobe $DISK
-sgdisk -n "${EFI_PART}:1m:${EFI_SIZE}" -t "${EFI_PART}:ef00" -c 0:esp $DISK
+if [ ${FORMAT_EFI} -eq 1 ]; then
+    sgdisk -n "${EFI_PART}:1m:${EFI_SIZE}" -t "${EFI_PART}:ef00" -c 0:esp $DISK
+fi
 sgdisk -n "${SWAP_PART}:0:${SWAP_SIZE}" -t "${SWAP_PART}:8200" -c 0:swap $DISK
 sgdisk -n "${POOL_PART}:0:${POOL_SIZE}" -t "${POOL_PART}:bf00" -c 0:pool $DISK
 export POOL_ID=/dev/disk/by-partuuid/$( blkid | grep "${POOL_DISK}" | awk -F "=" '{print $NF}' | cut -d '"' -f 2 )
 
 #
 # Create EFI partition
-mkfs.vfat -F32 $EFI_DISK
+if [ ${FORMAT_EFI} -eq 1 ]; then
+    mkfs.vfat -F32 $EFI_DISK
+fi
 #
 # Create the zpool
 # 

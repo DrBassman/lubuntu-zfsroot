@@ -5,6 +5,9 @@ if [ "${EUID}" -ne 0 ]; then
     echo "Please run this script as root."
     exit 1
 fi
+USER_NAME="ryan"
+FULL_NAME="Beavis"
+# Set next 2 to 0 if other OS already on disk...
 DISK=/dev/sda
 EFI_PART=1
 SWAP_PART=2
@@ -29,9 +32,10 @@ locale-gen
 
 groupadd --system sambashare
 
-useradd -m -U -s /bin/bash -c Beavis ryan
-usermod -aG adm,cdrom,dip,lpadmin,plugdev,sambashare,sudo ryan
-chown -R  ryan:ryan /home/ryan
+useradd -m -U -s /bin/bash -c "${FULL_NAME}" ${USER_NAME}
+usermod -aG adm,cdrom,dip,lpadmin,plugdev,sambashare,sudo ${USER_NAME}
+chown -R  ${USER_NAME}:${USER_NAME} /home/${USER_NAME}
+passwd ${USER_NAME}
 
 usermod -p '!' root
 
