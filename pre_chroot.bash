@@ -85,7 +85,7 @@ udevadm trigger
 #
 # # Install lubuntu...(taken from session.log from virtual box install)...
 mkdir -p "${NEW_ROOT}"/boot/efi
-mount -t vfat -o defaults /dev/sda1 "${NEW_ROOT}"/boot/efi
+mount -t vfat -o defaults ${EFI_DISK} "${NEW_ROOT}"/boot/efi
 
 udevadm settle
 sync
