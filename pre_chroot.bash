@@ -110,3 +110,7 @@ rsync -aHAXSr --filter=-x\ trusted.overlay.\* --exclude /proc/ --exclude /sys/ -
 
 # # Generate machine-id." ( 12 / 42 ) 
 systemd-machine-id-setup --root="${NEW_ROOT}"
+
+cp /cdrom/casper/vmlinuz "${NEW_ROOT}"/boot/vmlinuz-$(uname -r)
+mkdir -pv "${NEW_ROOT}"/media/cdrom
+mount --bind /cdrom "${NEW_ROOT}"/media/cdrom
