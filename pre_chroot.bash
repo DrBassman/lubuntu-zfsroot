@@ -76,9 +76,11 @@ mount -t vfat -o defaults /dev/sda1 "${NEW_ROOT}"/boot/efi
 
 udevadm settle
 sync
+mkdir -p "${NEW_ROOT}"/dev
 mount -o bind /dev "${NEW_ROOT}"/dev
 udevadm settle
 sync
+mkdir -p "${NEW_ROOT}"/proc
 mount -t proc -o defaults proc "${NEW_ROOT}"/proc
 udevadm settle
 sync
@@ -90,6 +92,7 @@ mkdir -p "${NEW_ROOT}"/run/systemd/resolve
 mount -o bind /run/systemd/resolve "${NEW_ROOT}"/run/systemd/resolve
 udevadm settle
 sync
+mkdir -p "${NEW_ROOT}"/run/udev
 mount -o bind /run/udev "${NEW_ROOT}"/run/udev
 udevadm settle
 sync
@@ -97,6 +100,7 @@ mkdir -p "${NEW_ROOT}"/sys
 mount -t sysfs -o defaults sys "${NEW_ROOT}"/sys
 udevadm settle
 sync
+mkdir -p "${NEW_ROOT}"/sys/firmware/efi/efivars
 mount -t efivarfs -o defaults efivarfs "${NEW_ROOT}"/sys/firmware/efi/efivars
 udevadm settle
 sync
@@ -114,3 +118,5 @@ systemd-machine-id-setup --root="${NEW_ROOT}"
 cp /cdrom/casper/vmlinuz "${NEW_ROOT}"/boot/vmlinuz-$(uname -r)
 mkdir -pv "${NEW_ROOT}"/media/cdrom
 mount --bind /cdrom "${NEW_ROOT}"/media/cdrom
+
+echo "End of $0"
