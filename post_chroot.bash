@@ -8,7 +8,6 @@ fi
 USER_NAME="ryan"
 USER_PASSWORD="none"
 FULL_NAME="Beavis"
-# Set next 2 to 0 if other OS already on disk...
 DISK=/dev/sda
 EFI_PART=1
 SWAP_PART=2
