@@ -6,6 +6,7 @@ if [ "${EUID}" -ne 0 ]; then
     exit 1
 fi
 USER_NAME="ryan"
+USER_PASSWORD="none"
 FULL_NAME="Beavis"
 # Set next 2 to 0 if other OS already on disk...
 DISK=/dev/sda
@@ -35,7 +36,7 @@ groupadd --system sambashare
 useradd -m -U -s /bin/bash -c "${FULL_NAME}" ${USER_NAME}
 usermod -aG adm,cdrom,dip,lpadmin,plugdev,sambashare,sudo ${USER_NAME}
 chown -R  ${USER_NAME}:${USER_NAME} /home/${USER_NAME}
-passwd ${USER_NAME}
+echo "${USER_NAME}:${USER_PASSWORD}" | chpasswd
 
 usermod -p '!' root
 
