@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# 1)  Install missing tools:
 if [ "${EUID}" -ne 0 ]; then
     echo "Please run this script as root."
     exit 1
 fi
 
+# 1)  Install missing tools:
 apt install -y zfsutils-linux zfs-initramfs gdisk
 modprobe zfs
 #
@@ -13,14 +13,22 @@ modprobe zfs
 #
 #  Define variables.  Change these to suit BEFORE running script...
 #
-DISK=/dev/sda
-BE_NAME=lubuntu-24.04
-WIPE_DISK=1
-FORMAT_EFI=1
-TIME_ZONE=""
-EFI_PART=1
-SWAP_PART=2
-POOL_PART=3
+DISK=/dev/sda			# Set to desired device to install.
+USER_NAME="ryan"		# Set to desired login name of user added
+FULL_NAME="Beavis"		# Set to desired full name of user added
+WIPE_DISK=1			# Set to 0 to preserve existing partitions
+FORMAT_EFI=1			# Set to 0 to preserve existing EFI
+TIME_ZONE="America/Chicago"	# Set to desired time zone...
+BE_NAME=lubuntu-24.04		# Set to desired boot environment name.
+EFI_PART=1			# EFI partition #
+SWAP_PART=2			# Swap partition #
+POOL_PART=3			# zpool partition #
+EFI_SIZE="+1g"			# set to desired size of EFI
+SWAP_SIZE="+16g"		# set to desired size of swap
+POOL_SIZE="-10m"		# set to desired size of zpool;
+#                                 (negative # leaves that much space at end)
+POOL_NAME="zlubuntu"		# set to desired name of zpool
+# nvme partitions have different names:
 if echo $DISK | grep -q nvme ; then
     EFI_DISK="${DISK}"p"${EFI_PART}"
     SWAP_DISK="${DISK}"p"${SWAP_PART}"
@@ -30,13 +38,9 @@ else
     SWAP_DISK="${DISK}""${SWAP_PART}"
     POOL_DISK="${DISK}""${POOL_PART}"
 fi
-EFI_SIZE="+1g"
-SWAP_SIZE="+16g"
-POOL_SIZE="-10m"
-POOL_NAME="zlubuntu"
 NEW_ROOT="/mnt-$(cat /etc/machine-id)"
 #
-export EFI_DISK TIME_ZONE
+export EFI_DISK TIME_ZONE USER_NAME FULL_NAME
 #
 if [ ${WIPE_DISK} -eq 1 ]; then
     wipefs -af $DISK
@@ -120,6 +124,10 @@ udevadm settle
 sync
 mkdir -p "${NEW_ROOT}"/sys/firmware/efi/efivars
 mount -t efivarfs -o defaults efivarfs "${NEW_ROOT}"/sys/firmware/efi/efivars
+udevadm settle
+sync
+mkdir -p "${NEW_ROOT}"/dev/pts
+mount -t devpts pts "${NEW_ROOT}"/dev/pts
 udevadm settle
 sync
     
