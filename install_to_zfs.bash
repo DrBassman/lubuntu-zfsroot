@@ -13,16 +13,16 @@ modprobe zfs
 #
 #  Define variables.  Change these to suit BEFORE running script...
 #
-DISK=/dev/sda			# Set to desired device to install.
-USER_NAME="ryan"		# Set to desired login name of user added
-FULL_NAME="Beavis"		# Set to desired full name of user added
-WIPE_DISK=1			# Set to 0 to preserve existing partitions
-FORMAT_EFI=1			# Set to 0 to preserve existing EFI
+DISK=/dev/sda	    		# Set to desired device to install.
+USER_NAME="ryan"	    	# Set to desired login name of user added
+FULL_NAME="Beavis"		    # Set to desired full name of user added
+WIPE_DISK=1	    		    # Set to 0 to preserve existing partitions
+FORMAT_EFI=1		    	# Set to 0 to preserve existing EFI
 TIME_ZONE="America/Chicago"	# Set to desired time zone...
 BE_NAME=lubuntu-24.04		# Set to desired boot environment name.
-EFI_PART=1			# EFI partition #
-SWAP_PART=2			# Swap partition #
-POOL_PART=3			# zpool partition #
+EFI_PART=1	    		# EFI partition #
+SWAP_PART=2		    	# Swap partition #
+POOL_PART=3			    # zpool partition #
 EFI_SIZE="+1g"			# set to desired size of EFI
 SWAP_SIZE="+16g"		# set to desired size of swap
 POOL_SIZE="-10m"		# set to desired size of zpool;
@@ -145,8 +145,6 @@ cp /cdrom/casper/vmlinuz "${NEW_ROOT}"/boot/vmlinuz-$(uname -r)
 mkdir -pv "${NEW_ROOT}"/media/cdrom
 mount --bind /cdrom "${NEW_ROOT}"/media/cdrom
 
-#
-cp post_chroot.bash "${NEW_ROOT}"
 ######################################################################
 # chroot commands                                                    #
 ######################################################################
