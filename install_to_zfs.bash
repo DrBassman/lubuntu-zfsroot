@@ -16,6 +16,7 @@ modprobe zfs
 DISK=/dev/sda	    		# Set to desired device to install.
 USER_NAME="ryan"	    	# Set to desired login name of user added
 FULL_NAME="Beavis"		    # Set to desired full name of user added
+USER_PASSWORD="none"		# Set to desired password for the created user
 WIPE_DISK=1	    		    # Set to 0 to preserve existing partitions
 FORMAT_EFI=1		    	# Set to 0 to preserve existing EFI
 TIME_ZONE="America/Chicago"	# Set to desired time zone...
