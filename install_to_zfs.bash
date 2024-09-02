@@ -41,7 +41,7 @@ else
 fi
 NEW_ROOT="/mnt-$(cat /etc/machine-id)"
 #
-export EFI_DISK TIME_ZONE USER_NAME FULL_NAME
+export EFI_DISK TIME_ZONE USER_NAME FULL_NAME USER_PASSWORD
 #
 if [ ${WIPE_DISK} -eq 1 ]; then
     wipefs -af $DISK
