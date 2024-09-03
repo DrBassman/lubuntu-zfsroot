@@ -175,23 +175,23 @@ main() {
     apt-get --purge -q -y remove ^live-\* calamares-settings-lubuntu calamares zram-config cifs-utils lubuntu-installer-prompt
     apt-get --purge -q -y autoremove
 
-    cat <<- EOF > /etc/apt/sources.list
+    cat << EOF > /etc/apt/sources.list
     # deb cdrom:[Lubuntu 24.04 LTS _Noble Numbat_ - Release amd64 (20240425.1)]/ noble main multiverse restricted universe
     deb http://archive.ubuntu.com/ubuntu/ noble main restricted universe multiverse
     deb http://security.ubuntu.com/ubuntu/ noble-security main restricted universe multiverse
     deb http://archive.ubuntu.com/ubuntu/ noble-updates main restricted universe multiverse
-    EOF
+EOF
 
     DEBIAN_FRONTEND=noninteractive apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::=--force-confnew full-upgrade
 
     apt install -y zfsutils-linux zfs-initramfs gdisk
     echo "swap /dev/disk/by-partlabel/swap /dev/urandom swap,offset=2048,cipher=aes-xts-plain64,size=512" >> /etc/crypttab
-    cat <<- EOF > /etc/fstab
+    cat << EOF > /etc/fstab
     $( blkid | grep "$EFI_DISK" | cut -d " " -f 2 ) /boot/efi vfat defaults 0 0
     /dev/mapper/swap none swap defaults 0 0
     proc /proc proc defaults 0 0
-    EOF
+EOF
 
     systemctl enable zfs.target
     systemctl enable zfs-import-cache
