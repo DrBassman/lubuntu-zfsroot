@@ -42,7 +42,7 @@ NEW_ROOT="/target"
 # Note:  MUST export variables so they are visible for chroot
 #        commands below...
 #
-export EFI_DISK TIME_ZONE USER_NAME FULL_NAME USER_PASSWORD
+export EFI_DISK TIME_ZONE USER_NAME FULL_NAME USER_PASSWORD POOL_NAME
 #
 # 1)  Install missing tools:
 apt install -y zfsutils-linux zfs-initramfs gdisk
