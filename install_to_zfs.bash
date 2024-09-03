@@ -124,7 +124,9 @@ mount -t squashfs -o loop /cdrom/casper/filesystem.squashfs /filesystem
 udevadm settle
 sync
 unsquashfs -l /cdrom/casper/filesystem.squashfs
+echo "Bootstrapping ${NEW_ROOT}..."
 rsync -aHAXSr --filter=-x\ trusted.overlay.\* --exclude /proc/ --exclude /sys/ --exclude /dev/ --exclude /run/ --exclude /run/udev/ --exclude /sys/firmware/efi/efivars/ --exclude /run/systemd/resolve/ /filesystem/ "${NEW_ROOT}"
+echo "Done."
 
 # # Generate machine-id." ( 12 / 42 ) 
 systemd-machine-id-setup --root="${NEW_ROOT}"
