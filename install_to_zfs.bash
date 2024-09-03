@@ -42,7 +42,7 @@ NEW_ROOT="/target"
 # Note:  MUST export variables so they are visible for chroot
 #        commands below...
 #
-export EFI_DISK TIME_ZONE USER_NAME FULL_NAME USER_PASSWORD POOL_NAME
+export EFI_DISK EFI_PART TIME_ZONE USER_NAME FULL_NAME USER_PASSWORD POOL_NAME
 #
 # 1)  Install missing tools:
 apt install -y zfsutils-linux zfs-initramfs gdisk
@@ -124,7 +124,7 @@ mount -t squashfs -o loop /cdrom/casper/filesystem.squashfs /filesystem
 udevadm settle
 sync
 unsquashfs -l /cdrom/casper/filesystem.squashfs
-rsync -aHAXSr --filter=-x\ trusted.overlay.\* --exclude /proc/ --exclude /sys/ --exclude /dev/ --exclude /run/ --exclude /run/udev/ --exclude /sys/firmware/efi/efivars/ --exclude /run/systemd/resolve/ --progress /filesystem/ "${NEW_ROOT}"
+rsync -aHAXSr --filter=-x\ trusted.overlay.\* --exclude /proc/ --exclude /sys/ --exclude /dev/ --exclude /run/ --exclude /run/udev/ --exclude /sys/firmware/efi/efivars/ --exclude /run/systemd/resolve/ /filesystem/ "${NEW_ROOT}"
 
 # # Generate machine-id." ( 12 / 42 ) 
 systemd-machine-id-setup --root="${NEW_ROOT}"
@@ -200,6 +200,9 @@ curl -o /boot/efi/EFI/ZBM/VMLINUZ.EFI -L https://get.zfsbootmenu.org/efi
 cp /boot/efi/EFI/ZBM/VMLINUZ.EFI /boot/efi/EFI/ZBM/VMLINUZ-BACKUP.EFI
 efibootmgr -c -d "$EFI_DISK" -p "$EFI_PART" -L "ZFSBootMenu (Backup)" -l \\EFI\\ZBM\\VMLINUZ-BACKUP.EFI
 efibootmgr -c -d "$EFI_DISK" -p "$EFI_PART" -L "ZFSBootMenu" -l \\EFI\\ZBM\\VMLINUZ.EFI
+# Install most current rEFInd...
+add-apt-repository ppa:rodsmith/refind
+apt update
 apt install -y refind
 ' # end of commands executed in chroot environment...
 ######################################################################
