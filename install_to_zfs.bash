@@ -144,15 +144,13 @@ ln -sf /etc/machine-id /var/lib/dbus/machine-id
 rm -f /etc/localtime
 ln -s /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
 
-locale-gen
-
 groupadd --system sambashare
 
 useradd -m -U -s /bin/bash -c "${FULL_NAME}" ${USER_NAME}
 usermod -aG adm,cdrom,dip,lpadmin,plugdev,sambashare,sudo ${USER_NAME}
 chown -R  ${USER_NAME}:${USER_NAME} /home/${USER_NAME}
-echo "${USER_NAME}:${USER_PASSWORD}" | chpasswd
 
+echo "${USER_NAME}:${USER_PASSWORD}" | chpasswd
 usermod -p \! root
 
 hwclock --systohc --utc
