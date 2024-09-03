@@ -1,15 +1,12 @@
 #!/bin/bash
 #
+# Run this script as root (or with sudo)
+#
 if [ "${EUID}" -ne 0 ]; then
     echo "Please run this script as root."
     exit 1
 fi
 
-# 1)  Install missing tools:
-apt install -y zfsutils-linux zfs-initramfs gdisk
-modprobe zfs
-#
-# #  Partition the hard drive ...  Adjust for your hardware / setup...
 #
 #  Define variables.  Change these to suit BEFORE running script...
 #
@@ -21,14 +18,15 @@ WIPE_DISK=1	    		    # Set to 0 to preserve existing partitions
 FORMAT_EFI=1		    	# Set to 0 to preserve existing EFI
 TIME_ZONE="America/Chicago"	# Set to desired time zone...
 BE_NAME=lubuntu-24.04		# Set to desired boot environment name.
-EFI_PART=1	    		# EFI partition #
-SWAP_PART=2		    	# Swap partition #
-POOL_PART=3			    # zpool partition #
-EFI_SIZE="+1g"			# set to desired size of EFI
-SWAP_SIZE="+16g"		# set to desired size of swap
-POOL_SIZE="-10m"		# set to desired size of zpool;
-#                                 (negative # leaves that much space at end)
+EFI_PART=1	         		# EFI partition #
+SWAP_PART=2		        	# Swap partition #
+POOL_PART=3			        # zpool partition #
+EFI_SIZE="+1g"  			# set to desired size of EFI
+SWAP_SIZE="+16g"    		# set to desired size of swap
+POOL_SIZE="-10m"	    	# set to desired size of zpool;
+#                             (negative # leaves that much space at end)
 POOL_NAME="zlubuntu"		# set to desired name of zpool
+UMOUNT_TARGET=0             # set to 1 to unmount target when done...
 # nvme partitions have different names:
 if echo $DISK | grep -q nvme ; then
     EFI_DISK="${DISK}"p"${EFI_PART}"
@@ -39,10 +37,16 @@ else
     SWAP_DISK="${DISK}""${SWAP_PART}"
     POOL_DISK="${DISK}""${POOL_PART}"
 fi
-NEW_ROOT="/mnt-$(cat /etc/machine-id)"
+NEW_ROOT="/target"
+#
+# Note:  MUST export variables so they are visible for chroot
+#        commands below...
 #
 export EFI_DISK TIME_ZONE USER_NAME FULL_NAME USER_PASSWORD
 #
+# 1)  Install missing tools:
+apt install -y zfsutils-linux zfs-initramfs gdisk
+modprobe zfs
 if [ ${WIPE_DISK} -eq 1 ]; then
     wipefs -af $DISK
     sgdisk --zap-all $DISK
@@ -96,37 +100,20 @@ udevadm trigger
 # # Install lubuntu...(taken from session.log from virtual box install)...
 mkdir -p "${NEW_ROOT}"/boot/efi
 mount -t vfat -o defaults ${EFI_DISK} "${NEW_ROOT}"/boot/efi
-
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/dev
 mount -o bind /dev "${NEW_ROOT}"/dev
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/proc
 mount -t proc -o defaults proc "${NEW_ROOT}"/proc
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/run
 mount -t tmpfs -o defaults tmpfs "${NEW_ROOT}"/run
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/run/systemd/resolve
 mount -o bind /run/systemd/resolve "${NEW_ROOT}"/run/systemd/resolve
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/run/udev
 mount -o bind /run/udev "${NEW_ROOT}"/run/udev
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/sys
 mount -t sysfs -o defaults sys "${NEW_ROOT}"/sys
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/sys/firmware/efi/efivars
 mount -t efivarfs -o defaults efivarfs "${NEW_ROOT}"/sys/firmware/efi/efivars
-udevadm settle
-sync
 mkdir -p "${NEW_ROOT}"/dev/pts
 mount -t devpts pts "${NEW_ROOT}"/dev/pts
 udevadm settle
@@ -177,10 +164,7 @@ update-initramfs -k all -c -t
 /bin/sh -c "apt-cdrom add -m -d=/media/cdrom/"
 /bin/sh -c "sed -i /deb http/d /etc/apt/sources.list"
 /bin/sh -c "apt-get update"
-/bin/sh -c "apt install -y --no-upgrade -o Acquire::gpgv::Options::=--ignore-time-conflict grub-efi-$(if grep -q 64 /sys/firmware/efi/fw_platform_size; then echo amd64-signed; else echo ia32; fi)"
 /bin/sh -c "apt install -y --no-upgrade -o Acquire::gpgv::Options::=--ignore-time-conflict shim-signed"
-
-/bin/sh -c "/usr/bin/dpkg --add-architecture i386"
 
 /bin/sh -c "/usr/libexec/fixconkeys-part2"
 
@@ -223,6 +207,14 @@ apt install -y refind
 ######################################################################
 # end of chroot environment commands                                             #
 ######################################################################
-umount -n -R "${NEW_ROOT}"
-zpool export ${POOL_NAME}
+if [ ${UMOUNT_TARGET} -eq 1 ]; then
+    umount -n -R "${NEW_ROOT}"
+    zpool export ${POOL_NAME}
+else
+    echo "$NEW_ROOT left mounted..."
+    echo "Unmount using..."
+    echo "# umount -n -R ${NEW_ROOT}"
+    echo "# zpool export ${POOL_NAME}"
+    echo ""
+fi
 echo "End of $0"
