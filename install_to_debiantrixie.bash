@@ -181,6 +181,7 @@ EOF
     curl -o /boot/efi/EFI/Debian/loader.efi -L https://get.zfsbootmenu.org/efi
     # Configure EFI boot entries
     efibootmgr -c -d "$EFI_DISK" -p "$EFI_PART" -L "Debian Trixie on zfs" -l \\EFI\\Debian\\loader.efi
+    tasksel
 '
     ######################################################################
     # end of chroot environment commands                                 #
