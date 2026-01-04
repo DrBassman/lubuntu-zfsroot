@@ -118,9 +118,10 @@ main() {
     #
     # Chroot into the new OS
     mount -t proc proc "${NEW_ROOT}"/proc
-    mount -t sysfs sys "${NEW_ROOT}"/proc
+    mount -t sysfs sys "${NEW_ROOT}"/sys
     mount -B /dev "${NEW_ROOT}"/dev
     mount -t devpts pts "${NEW_ROOT}"/dev/pts
+    mount -t efivarfs efivarfs "${NEW_ROOT}"/sys/firmware/efi/efivars
     ######################################################################
     # chroot commands                                                    #
     ######################################################################
@@ -128,7 +129,7 @@ main() {
     #
     # Basic Debian Configuration
     # set hostname
-    echo "${HOST_NAME}" > /etc/HOST_NAME
+    echo "${HOST_NAME}" > /etc/hostname
     echo -e "127.0.1.1\t${HOST_NAME}" >> /etc/hosts
     # set root password
     echo "${ROOT_PASSWORD}" | passwd -s
@@ -150,8 +151,13 @@ deb-src http://deb.debian.org/debian trixie-updates main non-free-firmware contr
 EOF
     # Update repository cache
     apt update
+    # Install addional base packages
+    apt install -y locales keyboard-configuration console-setup
+    # Configure packages to customize local and console properties
+    dpkg-reconfigure locales tzdata
     # ZFS Configuration
-    apt install linux-headers-amd64 linux-image-amd64 zfs-initramfs dosfstools curl efibootmgr
+    apt install -y linux-headers-amd64 linux-image-amd64 dosfstools curl efibootmgr tasksel command-not-found network-manager
+    apt install -y zfs-initramfs
     echo "REMAKE_INITRD=yes" > /etc/dkms/zfs.conf
     systemctl enable zfs.target
     systemctl enable zfs-import-cache
@@ -172,7 +178,6 @@ EOF
     mkdir -p /boot/efi/EFI/Debian
     curl -o /boot/efi/EFI/Debian/loader.efi -L https://get.zfsbootmenu.org/efi
     # Configure EFI boot entries
-    mount -t efivarfs efivarfs /sys/firmware/efi/efivars
     efibootmgr -c -d "$EFI_DISK" -p "$EFI_PART" -L "Debian Trixie on zfs" -l \\EFI\\Debian\\loader.efi
 '
     ######################################################################
