@@ -137,6 +137,9 @@ main() {
     useradd -m -U -u 1001 -s /bin/bash -c "${FULL_NAME}" ${USER_NAME}
     usermod -aG sudo ${USER_NAME}
     echo "${USER_PASSWORD}" | passwd -s ${USER_NAME}
+    # set timezone
+    rm -f /etc/localtime
+    ln -s /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
     # configure apt sources
     cat <<EOF > /etc/apt/sources.list
 deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib
@@ -154,10 +157,9 @@ EOF
     # Install addional base packages
     apt install -y locales keyboard-configuration console-setup
     # Configure packages to customize local and console properties
-    dpkg-reconfigure locales tzdata
+    dpkg-reconfigure locales
     # ZFS Configuration
-    apt install -y linux-headers-amd64 linux-image-amd64 dosfstools curl efibootmgr tasksel command-not-found network-manager
-    apt install -y zfs-initramfs
+    apt install -y linux-headers-amd64 linux-image-amd64 dosfstools curl efibootmgr tasksel command-not-found network-manager zfs-initramfs
     echo "REMAKE_INITRD=yes" > /etc/dkms/zfs.conf
     systemctl enable zfs.target
     systemctl enable zfs-import-cache
@@ -170,7 +172,7 @@ EOF
     zfs set org.zfsbootmenu:commandline="quiet" ${POOL_NAME}/ROOT
     # Create an fstab entry and mount
     cat << EOF > /etc/fstab
-    $( blkid | grep "$EFI_DISK" | cut -d " " -f 2 ) /boot/efi vfat defaults 0 0
+$( blkid | grep "$EFI_DISK" | cut -d " " -f 2 ) /boot/efi vfat defaults 0 0
 EOF
     mkdir -p /boot/efi
     mount /boot/efi
