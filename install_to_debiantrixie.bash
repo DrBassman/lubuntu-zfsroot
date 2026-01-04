@@ -182,6 +182,7 @@ EOF
     # Configure EFI boot entries
     efibootmgr -c -d "$EFI_DISK" -p "$EFI_PART" -L "Debian Trixie on zfs" -l \\EFI\\Debian\\loader.efi
     tasksel
+    apt purge -y nano
 '
     ######################################################################
     # end of chroot environment commands                                 #
